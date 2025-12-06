@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root{
+  --brand:#f97316;   /* naranja */
+  --brand-d:#ea580c;
+  --accent:#22c55e;  /* verde (chatbot) */
+  --ink:#0f172a;
+}
+
+/* Texto base más legible */
+body{ @apply text-slate-800 leading-relaxed; }
+
+/* Headings */
+.section-title{ @apply text-2xl md:text-3xl font-extrabold mb-4 text-orange-500; }
+.h-hero{ @apply text-4xl md:text-5xl font-black tracking-tight text-slate-900; }
+
+/* Botones */
+.btn{ @apply inline-flex items-center gap-2 px-4 py-2 rounded-2xl font-semibold shadow transition active:scale-95; }
+.btn-primary{
+  background: linear-gradient(135deg,var(--brand),#ff8a1d);
+  color:#fff;
+}
+.btn-primary:hover{ filter: brightness(0.95); }
+.btn-outline{
+  @apply border rounded-2xl;
+  color: var(--brand); border-color: var(--brand);
+}
+.btn-outline:hover{ background: var(--brand); color:#fff; }
+
+/* Chips/enlaces suaves */
+.link-muted{ @apply text-slate-600 hover:text-slate-900 underline underline-offset-4; }
+
+/* Tarjetas */
+.card{ @apply bg-white rounded-2xl shadow p-4 border border-gray-100 hover:shadow-lg transition; }
+
+/* Form buttons smaller & right-aligned helper */
+.form-actions-right { display:flex; justify-content:flex-end; gap:.5rem; }
+.btn-sm { padding:.5rem .75rem; font-size:.875rem; border-radius: .75rem; }
+
+
